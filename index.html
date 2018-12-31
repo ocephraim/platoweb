@@ -4,11 +4,15 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>PLATOHUB | REDEFINING INDUSTRIES</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/onepage-scroll.css" type="text/css"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <script src="main.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- <script src="js/jquery.onepage-scroll.min.js" type="text/javascript"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <nav class="container navbg">
@@ -68,7 +72,7 @@
                         </div><!--empowerment-->
                     </div><!--row-->
                 </div><!--container-->            
-                <div class="vl right"></div><!--vertical_line-->
+                <!-- <div class="vl right"></div>vertical_line -->
             </div><!--wrap-->
         </div><!--offset-->
     </section><!--whatWeDo-->
@@ -79,7 +83,7 @@
                 <div class="vl left"></div><!--vertical_line-->
                 <p class="tag tag2">The Platohub Way</p>
                 <img class="img-fluid process" src="images/process.svg" alt="">
-                <div class="vl right"></div><!--vertical_line-->
+                <!-- <div class="vl right"></div>vertical_line -->
             </div><!--wrap-->
         </div><!--offset-->
     </section><!--thePlatohubWay-->
@@ -90,18 +94,26 @@
                 <div class="vl left"></div><!--vertical_line-->
                 <p class="tag">What we are</p>
                 <h5>We drive innovation by indentifying service gaps in industries and creating solutions</h5>
-                <div class="platforms">
-                    <a href="">
-                        <img class="img-fluid" src="/images/grupa.svg" alt="grupa">
-                    </a>
-                    <a href="">
-                        <img class="img-fluid" src="images/crawl.svg" alt="crawl">
-                    </a>
-                    <a href="">
-                        <img class="img-fluid" src="images/gower.svg" alt="gower">
-                    </a>
+                <div class="platforms main">
+                    <section class="grupa">
+                        <a href="">
+                            <img class="img-fluid" src="/images/grupa.svg" alt="grupa">
+                        </a>
+                    </section><!--grupa-->
+
+                    <section class="crawl">
+                        <a href="">
+                            <img class="img-fluid" src="images/crawl.svg" alt="crawl">
+                        </a>
+                    </section><!--crawl-->
+
+                    <section class="gower">
+                        <a href="">
+                            <img class="img-fluid" src="images/gower.svg" alt="gower">
+                        </a>
+                    </section><!--gower-->
                 </div><!--platforms-->      
-                <div class="vl right"></div><!--vertical_line-->
+                <!-- <div class="vl right"></div>vertical_line -->
             </div><!--wrap-->
         </div><!--offset-->
     </section><!--whereWeAre-->
@@ -172,7 +184,7 @@
                     <p class="address">70 Olonode street, Alagomeji Yaba, Lagos</p>
                     <a href="mailto:info@platohub.com">info@platohub.com</a>
                 </div><!--contacts-->
-                <div class="vl right"></div><!--vertical_line-->
+                <!-- <div class="vl right"></div>vertical_line -->
             </div><!--wrap-->
     </section><!--getInTouch-->
 
@@ -200,4 +212,19 @@
         </div><!--wrap-->
     </footer>
 </body>
+<script>
+    $(".main").onepage_scroll({
+        sectionContainer: "section",
+        easing: "ease",
+        animationTime: 1000,
+        pagination: false,
+        updateURL: false,
+        beforeMove: function(index) {},
+        afterMove: function(index) {},
+        loop: false,
+        keyboard: true,
+        responsiveFallback: false,
+        direction: "vertical"  
+    });
+</script>
 </html>
