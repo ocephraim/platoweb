@@ -49,6 +49,60 @@
 .navBrand img {
     height: auto;
 }
+.mobileNav {
+    display: none;
+}
+.menu {
+    display: block;
+    font-weight:bold; 
+    font-size:0.8em; 
+    width:100%;
+    background:#212121;
+    text-align:center;
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    top: 100%;
+}
+.menu a {
+    display: block;
+    margin: 0;
+    padding: 0.9em 0;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+.harmburger {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 10000;
+}
+.bar1 , .bar2, .bar3 { 
+  width: 2em;
+  height: 0.13em;
+  background-color: #333;
+  margin: 0.5em 0;
+  transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-0.5em, 0.375em) ;
+    transform: rotate(-45deg) translate(-0.5em, 0.375em) ;
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-0.5em, -0.5em) ;
+    transform: rotate(45deg) translate(-0.5em, -0.5em) ;
+}
+@media all and (max-width: 575px) {
+    .navLinks {
+        display: none;
+    }
+    .mobileNav {
+        display: block;
+    }
+}
 
 /* div layout styles */
 .offset {
@@ -61,6 +115,9 @@
     position: relative;
     margin: 0 auto;
     max-width: 76.3em;
+}
+.inset {
+    padding: 0 30px;
 }
 .vl {
     border-left: 1px solid #bbbbbb;
@@ -111,6 +168,28 @@
     top: 4.63em;
     color: #ffffff;
 }
+@media all and (max-width: 575px) {
+    .tag {
+        font-size: 0.875em; 
+    }
+    .offset {
+        padding: 4.5em 0 6.3em;
+    }
+    .offset2 {
+        padding: 6.3em 0 4.5em;
+    }
+    .vl {
+        height: 10em;
+    }
+}
+/* @media all and (max-width: 350px) {
+    .offset {
+        padding: 3em 0 5em;
+    }
+    .offset2 {
+        padding: 5em 0 3em;
+    }
+} */
 
 /* hero styles */
 .hero {
@@ -144,6 +223,11 @@
     position: absolute;
     top: 100%;
     margin-top: -70px;
+}
+@media all and (max-width: 575px) {
+    .hero h1 {
+        font-size: 2em;
+    }
 }
 
 /* subHero styles */
@@ -180,6 +264,18 @@
     opacity: 0.75;
     font-weight: 200;
 }
+@media all and (max-width: 575px) {
+    .subHero h3 {
+        padding-top: 80px;
+    }
+    .subHero p {
+        padding-bottom: 72px;
+    }
+    .subHero img {
+        opacity: 0.2;
+    }
+}
+
 
 /* whatWeDo styles */
 .whatWeDo {
@@ -222,6 +318,19 @@
 .empowerment .color {
     background: conic-gradient(from 180deg, rgba(120, 193, 29, 0.65),  rgba(120, 193, 29, 1));
 }
+@media all and (max-width: 575px) {
+    .whatWeDo h5 {
+        margin: 0 auto 40px;
+    }
+    .what {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .what .content {
+        text-align: center;
+    }
+}
 
 /* thePlatohubWay styles */
 .thePlatohubWay {
@@ -235,6 +344,24 @@
     top: -195px;
     left: 50%;
     transform: translateX(-50%);
+}
+@media all and (max-width: 575px) {
+    .thePlatohubWay {
+        height: 319px;
+    }
+    .process {
+        top: -6.19em;
+    }
+}
+@media all and (max-width: 400px) {
+    .thePlatohubWay {
+        height: 270px;
+    }
+}
+@media all and (max-width: 350px) {
+    .thePlatohubWay {
+        height: 220px;
+    }
 }
 
 /* whereWeAre styles */
@@ -257,6 +384,17 @@
 }
 .platforms section:first-child {
     padding-top: 0;
+}
+@media all and (max-width: 575px) {
+    .whereWeAre h5 {
+        margin: 0 auto 70px;
+    }
+    .platforms section {
+        padding-top: 72px;
+    }
+    .platforms section:first-child {
+        padding-top: 0;
+    }
 }
 
 /* theFoundingPartners styles */
@@ -387,6 +525,20 @@ form > div:first-child {
     font-size: 1.1em;
     color: #0066F4;
 }
+@media all and (max-width: 575px) {
+    .getInTouch h5 {
+        margin: 0 auto 40px;
+    }    
+    form > div {
+        margin-top: 16px;
+    }
+    form > div:first-child {
+        margin-top: 0;
+    }
+    .btn, .contacts {
+        margin-top: 28px;
+    } 
+}
 
 /* footer styles */
 footer {
@@ -416,4 +568,21 @@ footer {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     text-align: center;
+}
+@media all and (max-width: 575px) {
+    .foot {
+        display: inline-block;
+        margin-top: 12px;
+    }
+    .copy p {
+        font-size: 1em;
+        margin-bottom: 8px;
+    }
+    .links {
+        display: block;
+        text-align: center;
+    }
+    .links a {
+        margin: 10px;
+    }
 }
