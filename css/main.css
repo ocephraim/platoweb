@@ -125,16 +125,6 @@
     position: absolute;
     left: 0;
 }
-/* @media (max-width: 990px) {
-    .vl {
-        right: 97%;
-    }
-}
-@media (max-width: 765px) {
-    .vl {
-        display: none;
-    }
-} */
 .left {
     left: 0;
 }
@@ -162,7 +152,7 @@
     left: -3.43em;
     top: 3.75em;
 }
-.tag3 {
+.tag4 {
     width: 12.5em;
     left: -5.31em;
     top: 4.63em;
@@ -170,29 +160,31 @@
 }
 @media all and (max-width: 575px) {
     .tag {
-        font-size: 0.875em; 
+        font-size: 0.75em;
+        top: 1.3em;
+    }
+    .tag2 {
+        top: 3.43em;
+    }
+    .tag3 {
+        top: 2.3em;
+    }
+    .tag4 {
+        top: 4.1em;
     }
     .offset {
-        padding: 4.5em 0 6.3em;
+        padding: 2.5em 0 4em;
     }
     .offset2 {
-        padding: 6.3em 0 4.5em;
+        padding: 4em 0 2.5em;
     }
     .vl {
         height: 10em;
     }
 }
-/* @media all and (max-width: 350px) {
-    .offset {
-        padding: 3em 0 5em;
-    }
-    .offset2 {
-        padding: 5em 0 3em;
-    }
-} */
-
 /* hero styles */
 .hero {
+    position: relative;
     height: 100vh;
     display: flex;
     display: -webkit-flex;
@@ -215,6 +207,7 @@
 .hero a {
     text-decoration: none;
     color: #212121;
+    transition: 0.4s all ease;
 }
 .hero i {
     font-size: 1.8em;
@@ -226,7 +219,15 @@
 }
 @media all and (max-width: 575px) {
     .hero h1 {
-        font-size: 2em;
+        font-size: 2.2em;
+        top: 50%;
+    }
+    .hero {
+        height: 500px;
+    }
+    .hero i {
+        font-size: 1.2em;
+        margin-top: -50px;
     }
 }
 
@@ -266,10 +267,12 @@
 }
 @media all and (max-width: 575px) {
     .subHero h3 {
-        padding-top: 80px;
+        padding-top: 50px;
+        font-size: 2em;
     }
     .subHero p {
-        padding-bottom: 72px;
+        padding-bottom: 42px;
+        font-size: 1em;
     }
     .subHero img {
         opacity: 0.2;
@@ -321,14 +324,19 @@
 @media all and (max-width: 575px) {
     .whatWeDo h5 {
         margin: 0 auto 40px;
+        font-size: 1.13em;
     }
     .what {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    .what .title {
+        font-size: 1em;
+    }
     .what .content {
         text-align: center;
+        font-size: 0.875em;
     }
 }
 
@@ -350,7 +358,7 @@
         height: 319px;
     }
     .process {
-        top: -6.19em;
+        top: -4.19em;
     }
 }
 @media all and (max-width: 400px) {
@@ -388,6 +396,7 @@
 @media all and (max-width: 575px) {
     .whereWeAre h5 {
         margin: 0 auto 70px;
+        font-size: 1.13em;
     }
     .platforms section {
         padding-top: 72px;
@@ -528,7 +537,11 @@ form > div:first-child {
 @media all and (max-width: 575px) {
     .getInTouch h5 {
         margin: 0 auto 40px;
-    }    
+        font-size: 1.13em;
+    }
+    .form-control, .btn, .contacts a, .contacts p {
+        font-size: 0.875em;
+    }
     form > div {
         margin-top: 16px;
     }
@@ -570,6 +583,9 @@ footer {
     text-align: center;
 }
 @media all and (max-width: 575px) {
+    footer {
+        padding-bottom: 32px;
+    }
     .foot {
         display: inline-block;
         margin-top: 12px;
