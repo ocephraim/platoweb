@@ -559,17 +559,45 @@
 .partnerNameSmall .title {
     font-size: 0.75em;
 }
+.partnerSmall .carousel-indicators {
+    margin: 10px 0 10px;
+    overflow: auto;
+    position: static;
+    text-align: left;
+    white-space: nowrap;
+    width: 100%;
+    height: auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.partnerSmall .carousel-indicators li {
+    width: 70px;
+    height: 70px;
+    border-radius: 1px;
+    display:flex; 
+    margin-bottom:5px;
+    cursor: pointer;
+}
+.thumb {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+}
 @media all and (max-width: 768px) {
-    .offset3 {
+    .theFoundingPartners, .offset3, .wrap3, .inset3, .thumbnails {
         padding: 0;
         margin: 0;
     }
-    .description2 {
+    /* .description2 {
         padding: 0;
         margin: 0;
         display: inline-block;
         right: 100%;
-    }
+    } */
     .partnerBig {
         display: none;
     }

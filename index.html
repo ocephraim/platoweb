@@ -59,7 +59,7 @@
         <img src="images/spaceship.svg" alt="spaceship">
     </section><!--subHero-->
 
-    <section class="whatWeDo container" id="about"
+    <section class="whatWeDo container" id="about">
         <div class="offset">
             <div class="wrap">
                 <div class="description">
@@ -131,7 +131,7 @@
                                 </ol><!--carousel-indicators-->
 
                                 <div class="carousel-inner">
-                                    <a class="carousel-item active" href="">
+                                    <a class="carousel-item active" href="https://grupa.io" target="_blank">
                                         <div class="fill grupa">
                                             <img class="img-fluid" src="/images/grupa.svg" alt="grupa">
                                         </div><!--grupa-->
@@ -160,13 +160,13 @@
 
     <section class="theFoundingPartners container" id="team">
         <div class="offset offset3">
-            <div class="wrap">
+            <div class="wrap wrap3">
                 <div class="description description2">
                     <div class="vl left"></div><!--vertical_line-->
                     <p class="tag tag4">The founding partners</p>
                 </div>
 
-                <div class="inset">
+                <div class="inset inset3">
                     <div class="partnerBig">
                         <img class="Sam photo" src="images/woman.png" alt="SamEkpe">
                         <div class="partnerName">
@@ -192,12 +192,50 @@
                         </div><!--partnerBg-->
                     </div><!--partnerBig-->
 
-                    <div class="partnerSmall">
-                        <img class="Sam photoSmall img-fluid" src="images/woman.png" alt="SamEkpe">
-                        <div class="partnerNameSmall">
-                            <p class="name">Samuel Ekpe</p>
-                            <p class="title">Chief Executive Officer</p>
-                        </div><!--partnerName-->
+                    <div id="otherCarousel" class="carousel carousel-fade carousel-thumbnails partnerSmall" data-ride="carousel">
+                        <div class="carousel-inner thumbnails">
+                            <div class="Sam carousel-item active">
+                                <img class="photoSmall" src="images/image1.svg" alt="SamEkpe">
+                                <div class="partnerNameSmall">
+                                    <p class="name">Samuel Ekpe</p>
+                                    <p class="title">Chief Executive Officer</p>
+                                </div><!--partnerName-->
+                            </div><!--Sam-->
+                            
+                            <div class="Moji carousel-item">
+                                <img class="photoSmall" src="images/image2.svg" alt="MojiDelumo">
+                                <div class="partnerNameSmall">
+                                    <p class="name">Moji Delumo</p>
+                                    <p class="title">Chief Operating Officer</p>
+                                </div><!--partnerName-->
+                            </div><!--Moji-->
+                                
+                            <div class="Dami carousel-item">
+                                <img class="photoSmall" src="images/image2.svg" alt="DamiThompson">
+                                <div class="partnerNameSmall">
+                                    <p class="name">Dami Thompson</p>
+                                    <p class="title">Chief Strategy Officer</p>
+                                </div><!--partnerName-->
+                            </div><!--Dami-->        
+                        </div><!--carousel-inner-->
+
+                        <ol class="carousel-indicators list-inline">
+                            <li class="list-inline-item active">
+                                <a data-target="#otherCarousel" data-slide-to="0">
+                                    <img class="thumb img-fluid" src="images/image1.svg" alt="SamEkpe">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a data-target="#otherCarousel" data-slide-to="1">
+                                    <img class="thumb img-fluid" src="images/image2.svg" alt="SamEkpe">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a data-target="#otherCarousel" data-slide-to="2">
+                                    <img class="thumb img-fluid" src="images/image2.svg" alt="SamEkpe">
+                                </a>
+                            </li>
+                        </ol>
                     </div><!--partnerSmall-->
                 </div><!--inset-->
             </div><!--wrap-->
