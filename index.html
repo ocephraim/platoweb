@@ -22,7 +22,7 @@
                 </a>
             </div><!--navHeader-->
             <div class="navLinks">
-                <a href="#about" class="navbar-link navbar-item">About</a>
+                <a href="#about" class="navbar-link navbar-item about">About</a>
                 <a href="#platforms" class="navbar-link navbar-item">Platforms</a>
                 <a href="#team" class="navbar-link navbar-item">Team</a>
                 <a href="#contact" class="navbar-link navbar-item">Contact</a>
@@ -133,19 +133,19 @@
                                 <div class="carousel-inner">
                                     <a class="carousel-item active" href="https://grupa.io" target="_blank">
                                         <div class="fill grupa">
-                                            <img class="img-fluid" src="/images/grupa.svg" alt="grupa">
+                                            <img class="img-fluid" src="/images/grupa.png" alt="grupa">
                                         </div><!--grupa-->
                                     </a>
                                     
                                     <a class="carousel-item" href="">
                                         <div class="fill crawl">
-                                            <img class="img-fluid" src="images/crawl.svg" alt="crawl">
+                                            <img class="img-fluid" src="images/crawl.png" alt="crawl">
                                         </div><!--crawl-->
                                     </a>
                                     
                                     <a class="carousel-item" href="">
                                         <div class="fill gower">
-                                            <img class="img-fluid" src="images/gower.svg" alt="gower">
+                                            <img class="img-fluid" src="images/gower.png" alt="gower">
                                         </div><!--gower-->
                                     </a>
                                 </div><!--caoursel-inner-->
@@ -168,24 +168,46 @@
 
                 <div class="inset inset3">
                     <div class="partnerBig">
-                        <img class="Sam photo" src="images/woman.png" alt="SamEkpe">
-                        <div class="partnerName">
-                            <p class="name">Samuel Ekpe</p>
-                            <p class="title">Chief Executive Officer</p>
-                        </div><!--partnerName-->
+                        <div class="partner">
+                            <div id="sam">
+                                <img class="photo" src="images/woman.png" alt="SamEkpe">
+                                <div class="partnerName">
+                                    <p class="name">Samuel Ekpe</p>
+                                    <p class="title">Chief Executive Officer</p>
+                                </div><!--partnerName-->
+                            </div>
+                            
+                            <div id="moji">
+                                <img class="photo" src="images/woman.png" alt="SamEkpe">
+                                <div class="partnerName">
+                                    <p class="name">Moji Delumo</p>
+                                    <p class="title">Chief Operating Officer</p>
+                                </div><!--partnerName-->
+                            </div>
+
+                            <div id="dami">
+                                <img class="photo" src="images/woman.png" alt="SamEkpe">
+                                <div class="partnerName">
+                                    <p class="name">Dami Thompson</p>
+                                    <p class="title">Chief Strategy Officer</p>
+                                </div><!--partnerName-->
+                            </div>
+                        </div><!--partner-->
+
+
                         <div class="partnerBg">
                             <a href="">
-                                <div class="partner">
+                                <div class="partnerThumb sam">
                                     <img class="img-fluid" src="images/image1.svg" alt="SamEkpe">
                                 </div>
                             </a>
                             <a href="">
-                                <div class="partner">
+                                <div class="partnerThumb moji">
                                     <img class="img-fluid" src="images/image2.svg" alt="MojiDelumo">
                                 </div>
                             </a>
                             <a href="">
-                                <div class="partner">
+                                <div class="partnerThumb dami">
                                     <img class="img-fluid" src="images/image1.svg" alt="DamiThompson">
                                 </div>
                             </a>
@@ -278,7 +300,9 @@
                     </form><!--contactForm-->
                     <div class="contacts">
                         <p class="address">70 Olonode street, Alagomeji Yaba, Lagos</p>
-                        <a href="mailto:info@platohub.com">info@platohub.com</a>
+                        <div class="clickToCopy" data-toggle="tooltip" title="Click to copy" data-placement="auto">
+                            <a href="mailto:info@platohub.com" class="email">info@platohub.com</a>
+                        </div>
                     </div><!--contacts-->
                 </div><!--inset-->
                 <!-- <div class="vl right"></div>vertical_line -->
@@ -319,7 +343,7 @@
 
         // invoke the carousel
         $('#myCarousel').carousel({
-        interval: 5000
+        interval: false
         });
 
         // scroll slides on mouse scroll 
@@ -350,6 +374,37 @@
                     $(this).off("touchmove");
             });
         });
+
+        //show and hide partner photos
+        $(".sam").click(function(e) {
+            e.preventDefault();
+            $("#sam").show(1000);
+            $("#moji").hide(1000);
+            $("#dami").hide(1000);
+        });
+        $(".moji").click(function(e) {
+            e.preventDefault();
+            $("#moji").show(1000);
+            $("#sam").hide(1000);
+            $("#dami").hide(1000);
+        });
+        $(".dami").click(function(e) {
+            e.preventDefault();
+            $("#dami").show(1000);
+            $("#moji").hide(1000);
+            $("#sam").hide(1000);
+        });
+
+        //initialize tooltip
+        $('[data--toggle=tooltip]').tooltip();
+
+        //copy to clipboard
+        // $(".clickToCopy").click(function(e) {
+        //     e.preventDefault();
+        //     $(this).siblings('a.email').select();
+        //     document.execCommand("copy");
+        //     alert("email copied!");
+        // });
     });
 </script>
 </html>
