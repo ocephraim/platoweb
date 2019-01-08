@@ -250,6 +250,21 @@
     position: absolute;
     top: 100%;
     margin-top: -70px;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+.hero i:hover {
+    animation: bounce 1s ease infinite;
+}
+@keyframes bounce {
+    50% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 @media all and (max-width: 575px) {
     .hero h1 {
