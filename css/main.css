@@ -145,55 +145,58 @@
     margin: 0 auto;
     max-width: 76.3em;
 }
+.inset {
+    padding: 0 30px;
+}
 .vl {
     border-left: 1px solid #bbbbbb;
-    height: 11.3em;
-    position: absolute;
-    left: 0;
-}
-.left {
-    left: 0;
-}
-.right {
-    top: 0;
-    left: 100%;
+    height: 60px;
 }
 .tag {
-    position: absolute;
+    /* position: absolute; */
     font-family: 'ProximaNova';
-    font-size: 1.13em;    
-    color: #000000;    
+    font-size: 14px;
     opacity: 0.7;
-    margin: 0;
-    padding: 0;
-    top: 1.3em;
-    left: -2.2em;
-    width: 6.25em;
+    text-transform: capitalize;
+    color: #000000;
+    /* margin-top: 10px; */
+    /* padding-right: 100px; */
+    /* top: 1.3em;
+    left: -2.2em; */
+    max-width: 100%;
     transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
+    margin-top: 45%;
+
 }
-.tag2 {
+/* .tag2 {
     width: 9em;
     left: -3.43em;
     top: 3.43em;
 }
 .tag3 {
     top: 2.3em;
-}
+} */
 .tag4 {
-    width: 12.5em;
+    /* width: 12.5em;
     left: -5.31em;
-    top: 4.1em;
+    top: 4.1em; */
     color: #ffffff;
 }
-/* .description {
-    position: sticky;
-    top: 90px;
-} */
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+}
 @media all and (max-width: 768px) {
     .description {
         display: none;
+    }
+    .inset {
+        padding: 0;
     }
 }
 @media all and (max-width: 575px) {
@@ -268,7 +271,7 @@
     position: relative;
     text-align: center;
     max-width: 1440px;
-    background: url(../images/star-pattern.svg), rgb(33, 33, 33);
+    background: url(../images/star-pattern.svg), #000000;
     background-color: #212121;
     color: #ffffff;
     /* height: 465px; */
@@ -512,7 +515,7 @@
 .theFoundingPartners {
     max-width: 1440px;
     /* height: 632px; */
-    background: #333333;
+    background: #000000;
     text-align: center;
     overflow: hidden;
     position: relative;
