@@ -163,7 +163,7 @@
     /* padding-right: 100px; */
     /* top: 1.3em;
     left: -2.2em; */
-    max-width: 100%;
+    /* max-width: 100%; */
     transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
@@ -182,14 +182,14 @@
     /* width: 12.5em;
     left: -5.31em;
     top: 4.1em; */
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 .description {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    left: 0;
+    left: -40px;
 }
 @media all and (max-width: 768px) {
     .description {
@@ -243,8 +243,8 @@
     color: #212121;
     transition: 0.4s all ease;
 }
-.hero i {
-    font-size: 1.8em;
+.hero img {
+    height: 4em;
     opacity: 0.7;
     justify-content: flex-end;
     position: absolute;
@@ -255,12 +255,12 @@
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
 }
-.hero i:hover {
+.hero img:hover {
     animation: bounce 1s ease infinite;
 }
 @keyframes bounce {
     50% {
-        transform: translateY(-50%);
+        transform: translateY(-15%);
     }
     100% {
         transform: translateY(0);
@@ -302,8 +302,8 @@
     margin: auto;
     padding-top: 160px;
     font-family: 'NeoSansPro';
-    font-weight: 500;
-    font-size: 2.5em;
+    font-weight: normal;
+    font-size: 2em;
 }
 .subHero p {
     max-width: 794px;
@@ -311,7 +311,7 @@
     padding-top: 24px;
     padding-bottom: 144px;
     font-family: 'ProximaNovaLight';
-    font-size: 1.3em;
+    font-size: 1.13em;
     line-height: 1.5em;
     opacity: 0.75;
     font-weight: 200;
@@ -339,55 +339,82 @@
 }
 .whatWeDo h5 {
     text-align: center;
-    margin: 0 auto 80px;
+    margin: 0 auto 64px;
     padding: 0;
     max-width: 775px;
-    font-size: 1.5em;
+    font-size: 1.25em;
     line-height: 1.3;
 }
+.whatWeDo .container {
+    margin: 0;
+    padding: 0;
+}
+.whatContent {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+}
+.whatPics {
+    background: url(../images/worldmap.png) center left no-repeat;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.whatText {
+    /* border: 1px solid red; */
+    /* margin: 0 auto; */
+}
+.what {
+    margin: 24px 0 0 40px;
+}
+.what:first-child {
+    margin-top: 0px;
+}
 .what .color {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 }
 .what .title {
     font-family: 'ProximaNova';
     font-weight: 600;
-    font-size: 1.1em;
-    margin-top: 24px;
+    font-size: 0.875em;
+    margin-top: 12px;
     margin-bottom: 0px;
 }
 .what .content {
     line-height: 1.3;
-    font-size: 0.9em;
-    opacity: 0.7;
-    margin-top: 8px;
+    font-size: 0.875em;
+    opacity: 0.5;
+    margin-top: 4px;
     width: 240px;
 }
 .innovation .color {
-    background: conic-gradient(from 180deg, rgba(75, 169, 221, 0.65), rgba(75, 169, 221, 1));
+    /* background: conic-gradient(from 180deg, rgba(75, 169, 221, 0.65), rgba(75, 169, 221, 1)); */
+    background: url(../images/innovation.png);
 }
 .service .color {
-    background: conic-gradient(from 180deg, rgba(255, 63, 63, 0.65), rgba(255, 63, 63, 1));
+    /* background: conic-gradient(from 180deg, rgba(255, 63, 63, 0.65), rgba(255, 63, 63, 1)); */
+    background: url(../images/service.png);
 }
 .empowerment .color {
-    background: conic-gradient(from 180deg, rgba(120, 193, 29, 0.65),  rgba(120, 193, 29, 1));
+    /* background: conic-gradient(from 180deg, rgba(120, 193, 29, 0.65),  rgba(120, 193, 29, 1)); */
+    background: url(../images/empowerment.png);
 }
 @media all and (max-width: 575px) {
     .whatWeDo h5 {
         margin: 0 auto 40px;
         font-size: 1.13em;
     }
-    .what {
+    /* .what {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+    } */
     .what .title {
-        font-size: 1em;
+        font-size: 0.75em;
     }
     .what .content {
-        text-align: center;
-        font-size: 0.875em;
+        /* text-align: center; */
+        font-size: 0.75em;
     }
 }
 
@@ -436,7 +463,7 @@
     margin: 0 auto 48px;
     padding: 0;
     max-width: 775px;
-    font-size: 1.5em;
+    font-size: 1.25em;
     line-height: 1.3;
 }
 .platforms {
@@ -530,7 +557,7 @@
 .theFoundingPartners {
     max-width: 1440px;
     /* height: 632px; */
-    background: #000000;
+    background: #FFFFFF;
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -559,7 +586,7 @@
 .partnerThumb {
     width: 165px;
     height: 165px;
-    background: #ffffff;
+    background: #000000;
     margin: 0 auto;
     margin-top: 8px;
 }
@@ -579,13 +606,14 @@
 .partnerName .name {
     font-size: 2em;
     font-weight: 600;
-    color: #FFFFFF;
+    color: #000000;
+    font-family: "NeoSansPro"
 }
 .partnerName .title {
     font-size: 0.9em;
     opacity: 0.7;
     text-align: center;
-    color: #FFFFFF;
+    color: #000000;
 }
 .partnerSmall {
     display: none;
@@ -671,7 +699,7 @@
     margin: 0 auto 80px;
     padding: 0;
     max-width: 775px;
-    font-size: 1.5em;
+    font-size: 1.25em;
     line-height: 1.3;
 }
 form {
