@@ -176,13 +176,13 @@
                                         </div><!--grupa-->
                                     </a>
                                     
-                                    <a class="carousel-item" href="">
+                                    <a class="carousel-item">
                                         <div class="fill crawl">
                                             <img class="img-fluid" src="images/crawl.png" alt="crawl">
                                         </div><!--crawl-->
                                     </a>
                                     
-                                    <a class="carousel-item" href="">
+                                    <a class="carousel-item">
                                         <div class="fill gower">
                                             <img class="img-fluid" src="images/gower.png" alt="gower">
                                         </div><!--gower-->
@@ -353,14 +353,31 @@
                     <p class="tag tag3">Get in touch</p>
                 </div>
                 <div class="inset">
-                    <h5>We are constantly looking out for the best minds, and ambitious people who are driven to build the future.</h5>
-                    <form action="" class="contactForm">
+                    <h5>We are constantly looking out for the best minds, and ambitious people who are driven to build the future. Get in touch with us</h5>
+
+                    <form action="" method="POST">
+                        <div class="fillForm">
+                            <label for="#select">I</label>
+                            <select name="whatIsThisAbout" id="select">
+                                <option value=""></option>
+                                <option value="work">want to work here</option>
+                                <option value="idea">have an idea that will dirsupt an industry</option>
+                                <option value="process">know how to better improve your process</option>
+                                <option value="question">have a question only Platohub can answer</option>
+                            </select>
+                        </div><!--fillForm-->
+
+                        <div id="work" class="jumbotron">
+                            <h3>Send here</h3>
+                        </div>
+                    </form>
+                    <!-- <form action="" class="contactForm">
                         <div class="form-group">
                             <label for="yourName" class="sr-only">Your name (optional)</label>
                             <input type="text" class="form-control" id="yourName" placeholder="Your name (optional)">
                         </div>
                         <div class="form-group">
-                            <label for="yourEmail" class="sr-only">Your cintact email</label>
+                            <label for="yourEmail" class="sr-only">Your contact email</label>
                             <input type="email" class="form-control" id="yourEmail" placeholder="Your contact email">
                         </div>
                         <div class="form-group">
@@ -378,7 +395,7 @@
                             <textarea name="" id="yourMessage" cols="10" rows="5" class="form-control" placeholder="Your message"></textarea>
                         </div>
                         <button type="submit" class="btn">Shoot Message</button>
-                    </form><!--contactForm-->
+                    </form>contactForm -->
                     <div class="contacts">
                         <p class="address">70 Olonode street, Alagomeji Yaba, Lagos</p>
                         <div class="clickToCopy" data-toggle="tooltip" title="Click to copy" data-placement="auto">
@@ -413,9 +430,33 @@
             </div><!--links-->
         </div><!--wrap-->
     </footer>
+
+    <a href="#" id="backToTop"><span>&#10148;</span></a>
 </body>
 <script>
     $(document).ready(function() {
+        $('#work').hide();
+
+        $('#select').change(function() {
+            $('#' + $(this).val()).fadeIn(1000);
+        });
+        //display back to top button
+        $(window).scroll(function() {
+            var height = $(window).scrollTop();
+            if (height > 200) {
+                $('#backToTop').fadeIn();
+            } else {
+                $('#backToTop').fadeOut();
+            }
+        });
+
+        //back to top
+        $('#backToTop').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 1000)
+            return false;
+        });
+
         //harmburger menu
         $(".harmburger, .navItems").click(function() {
             $(".menu").slideToggle("slow", function() {

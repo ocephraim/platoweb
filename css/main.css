@@ -496,6 +496,9 @@
         margin: 0 auto 40px;
         font-size: 1.13em;
     }
+    .what:nth-child(2) {
+        margin-top: 24px;
+    }
     /* .what {
         display: flex;
         flex-direction: column;
@@ -843,7 +846,38 @@ form {
     max-width: 450px;
     margin: 0 auto;
 }
-form > div {
+form label {
+    font-size: 1.75em;
+}
+.fillForm {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+}
+#select {
+    width: 300px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    border-bottom: 1px solid #000000;
+    height: 30px;
+    margin-left: 8px;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+}
+#select:hover, #select:focus, #select:active {
+    box-shadow: none;
+    outline: none;
+    border-bottom: 0.5px solid #0066f4;
+}
+#select::-ms-expand {
+    display: none;
+}
+/* form > div {
     margin-top: 32px;
 }
 form > div:first-child {
@@ -860,7 +894,7 @@ form > div:first-child {
 .form-control:focus {
     box-shadow: none;
     border: 0.5px solid #0066F4;
-}
+} */
 .btn {
     margin-top: 56px;
     width: 100%;
@@ -907,7 +941,7 @@ form > div:first-child {
         margin: 0 auto 40px;
         font-size: 1.13em;
     }
-    .form-control, .btn, .contacts a, .contacts p {
+    /* .form-control, .btn, .contacts a, .contacts p {
         font-size: 0.875em;
     }
     form > div {
@@ -915,7 +949,7 @@ form > div:first-child {
     }
     form > div:first-child {
         margin-top: 0;
-    }
+    } */
     .btn, .contacts {
         margin-top: 28px;
     } 
@@ -969,6 +1003,41 @@ footer {
     .links a {
         margin: 10px;
     }
+}
+
+#backToTop {
+    width: 40px;
+    height: 40px;
+    /* line-height: 40px; */
+    overflow: hidden;
+    z-index: 10000;
+    display: none;
+    cursor: pointer;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 1%;
+    color: #121212;
+    background: #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.13em;
+    text-decoration: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+#backToTop span {
+    position: relative;
+    top: 8px;
+    margin: 0 auto;
+}
+#backToTop:hover {
+    background-color: #F9F9F9;
+    color: #000000;
+    box-shadow: none;
 }
 
 /* .theFoundingPartners, .thePlatohubWay, .whereWeAre, .whatWeDo, .getInTouch, .subHero {
