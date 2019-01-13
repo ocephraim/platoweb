@@ -358,7 +358,7 @@
                     <form action="" method="POST">
                         <div class="fillForm">
                             <label for="#select">I</label>
-                            <select name="whatIsThisAbout" id="select">
+                            <select class="form-control" name="whatIsThisAbout" id="select">
                                 <option value="empty"></option>
                                 <option value="work">want to work here</option>
                                 <option value="idea">have an idea that will dirsupt an industry</option>
@@ -368,16 +368,54 @@
                         </div><!--fillForm-->
 
                         <div id="work" class="jumbotron">
-                            <h3>Send here</h3>
+                            <div class="form-group">
+                                <label for="coverLetter">We take our hiring process very seriously. Tell us why you want to join us</label>
+                                <textarea class="form-control" name="cover letter" id="coverLetter" cols="30" rows="8" placeholder="start typing..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="attachFile">Attach a copy of your resume</label>
+                                <input class="form-control" type="file" id="attachFile">                                
+                            </div>
+
+                            <div class="form-group">
+                                <label for="portfolio">Add portfolio link</label>
+                                <input class="form-control" type="url" name="portfolio" id="portfolio" placeholder="https://">
+                            </div>
+
+                            <img src="images/jumbo-img.png" alt="">
+
+                            <button type="submit" class="btn">Shoot</button>
                         </div><!--work-->
                         <div id="idea" class="jumbotron">
-                            <h3>Let's talk</h3>
+                            <div class="form-group">
+                                <label for="greatIdeas">Let us change the world together. Tell us just enough to get our attention</label>
+                                <textarea class="form-control" name="cover letter" id="greatIdeas" cols="30" rows="10" placeholder="Skip the jargon..."></textarea>
+                            </div>
+
+                            <img src="images/jumbo-img.png" alt="">
+
+                            <button type="submit" class="btn">Shoot</button>
                         </div><!--idea-->
                         <div id="improve" class="jumbotron">
-                            <h3>Let's hear</h3>
+                            <div class="form-group">
+                                <label for="greatIdeas">We are glad you care. Let us hear from you</label>
+                                <textarea class="form-control" name="cover letter" id="greatIdeas" cols="30" rows="10" placeholder="Skip the jargon..."></textarea>
+                            </div>
+
+                            <img src="images/jumbo-img.png" alt="">
+
+                            <button type="submit" class="btn">Shoot</button>
                         </div><!--improve-->
                         <div id="question" class="jumbotron">
-                            <h3>Ask away</h3>
+                            <div class="form-group">
+                                <label for="greatIdeas">We are glad you trust us. What is your question?</label>
+                                <textarea class="form-control" name="cover letter" id="greatIdeas" cols="30" rows="10" placeholder="Skip the jargon..."></textarea>
+                            </div>
+
+                            <img src="images/jumbo-img.png" alt="">
+
+                            <button type="submit" class="btn">Shoot</button>
                         </div><!--question-->
                     </form>
                     <!-- <form action="" class="contactForm">
@@ -445,7 +483,7 @@
 <script>
     $(document).ready(function() {
 
-        //get in touch with us. 
+        //get in touch with us.
         var GetInTouch = function() {
             $('#work, #idea, #improve, #question').hide();
         }
