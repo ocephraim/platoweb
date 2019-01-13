@@ -991,7 +991,18 @@ form label {
     }
     .btn, .contacts {
         margin-top: 24px;
-    } 
+    }  
+    .btn {
+        padding: 10px 15px;
+        float: right;
+        clear: both;
+        text-transform: uppercase;
+        background: linear-gradient(180deg, #212121 0%, #141414 100%);
+        border-radius: 5px;
+        letter-spacing: 2px;
+        font-size: 0.875em;
+        color: #FFFFFF; 
+    }
 }
 
 /* footer styles */
