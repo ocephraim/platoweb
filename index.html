@@ -11,6 +11,7 @@
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -86,7 +87,9 @@
 
     <section id="subHero"class="subHero container">
         <h3 class="animated">Building a hassle-free future</h3>
-        <p class="animated">We as an R&D company, seek and take on huge problems, to create solutions that radically simplify lives, building Superior Human experience and help people put their lives on auto-pilot</p>
+        <div class="animated">
+            <p class="animated">We as an R&D company, seek and take on huge problems, to create solutions that radically simplify lives, building Superior Human experience and help people put their lives on auto-pilot</p>
+        </div>
         <!-- <img src="" alt="stars"> -->
         <img src="images/spaceship.svg" alt="spaceship">
     </section><!--subHero-->
@@ -325,17 +328,17 @@
                         <ol class="carousel-indicators list-inline">
                             <li class="list-inline-item active">
                                 <a data-target="#otherCarousel" data-slide-to="0">
-                                    <img class="thumb img-fluid" src="images/image2.svg" alt="SamEkpe">
+                                    <img class="thumb img-fluid" src="images/woman.png" alt="SamEkpe">
                                 </a>
                             </li>
                             <li class="list-inline-item">
                                 <a data-target="#otherCarousel" data-slide-to="1">
-                                    <img class="thumb img-fluid" src="images/image2.svg" alt="SamEkpe">
+                                    <img class="thumb img-fluid" src="images/woman.png" alt="MojiDelumo">
                                 </a>
                             </li>
                             <li class="list-inline-item">
                                 <a data-target="#otherCarousel" data-slide-to="2">
-                                    <img class="thumb img-fluid" src="images/image2.svg" alt="SamEkpe">
+                                    <img class="thumb img-fluid" src="images/woman.png" alt="DamiThompson">
                                 </a>
                             </li>
                         </ol>
@@ -432,7 +435,7 @@
                             <button type="submit" class="btn">Shoot</button>
                         </div><!--improve-->
                         <div id="question" class="jumbotron">
-                            
+
                             <img src="images/close.svg" alt="close" class="close">
 
                             <div class="form-group">
@@ -486,9 +489,9 @@
             </div><!--wrap-->
     </section><!--getInTouch-->
 
-    <footer>
+    <footer class="animated">
         <hr>
-        <div class="wrap foot container animated">
+        <div class="wrap foot container">
             <div class="copy">
                 <p>&copy; Copyright Platohub 2019</p>
             </div><!--copy-->
@@ -512,164 +515,4 @@
 
     <a href="#" id="backToTop"><span>&#10148;</span></a>
 </body>
-<script>
-    $(document).ready(function() {
-
-        //get in touch with us.
-        var GetInTouch = function() {
-            $('#work, #idea, #improve, #question').hide();
-        }
-        GetInTouch();
-        
-        $('#select').change(function() {
-            GetInTouch();
-            $('#' + $(this).val()).fadeIn(1000);
-        });
-        $('.close').click(function() {
-            $('.jumbotron').fadeOut(1000);
-        });
-
-
-        //display back to top button & customize header
-        $(window).scroll(function() {
-            var height = $(window).scrollTop();
-            if (height > 100) {
-                $('#backToTop').fadeIn();
-                $('nav').addClass('navbgScrolled');
-            } else {
-                $('#backToTop').fadeOut();
-                $('nav').removeClass('navbgScrolled');
-            }
-        });
-
-        //back to top
-        $('#backToTop').click(function(e) {
-            e.preventDefault();
-            $('html, body').animate({scrollTop: 0}, 1000)
-            return false;
-        });
-
-        //harmburger menu
-        $(".harmburger, .navItems").click(function() {
-            $(".menu").slideToggle("slow", function() {
-                $(".harmburger").toggleClass("change");
-            });
-        });
-
-        //scroll down animation
-        $('a[href^="#"]').click(function(e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: $($(this).attr("href")).offset().top-80
-            }, 1000)
-        });
-
-        // invoke the carousel
-        $('#myCarousel, #otherCarousel').carousel({
-        interval: false
-        });
-
-        // scroll slides on mouse scroll 
-        $('#myCarousel').bind('mousewheel DOMMouseScroll', function(e){
-            if(e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
-                $(this).carousel('prev');
-                
-            }
-            else{
-                $(this).carousel('next');
-                
-            }
-        });
-
-        //scroll slides on swipe for touch enabled devices 
-        $("#myCarousel").on("touchstart", function(event){
-            var yClick = event.originalEvent.touches[0].pageY;
-            $(this).one("touchmove", function(event){
-                var yMove = event.originalEvent.touches[0].pageY;
-                if( Math.floor(yClick - yMove) > 1 ){
-                    $(".carousel").carousel('next');
-                }
-                else if( Math.floor(yClick - yMove) < -1 ){
-                    $(".carousel").carousel('prev');
-                }
-            });
-            $(".carousel").on("touchend", function(){
-                    $(this).off("touchmove");
-            });
-        });
-
-        //show and hide partner photos desktop
-        $("#moji").hide();
-        $("#dami").hide();
-        $(".samnext").click(function(e) {
-            e.preventDefault();            
-            $("#sam").fadeOut(1000, function() {
-                $("#moji").fadeIn(1200);
-            });
-        });
-        $(".samprev").click(function(e) {
-            e.preventDefault();            
-            $("#sam").fadeOut(1000, function() {
-                $("#dami").fadeIn(1200);
-            });            
-        });
-        
-        $(".mojinext").click(function(e) {
-            e.preventDefault();            
-            $("#moji").fadeOut(1000, function() {
-                $("#dami").fadeIn(1200);
-            });
-        });
-        $(".mojiprev").click(function(e) {
-            e.preventDefault();            
-            $("#moji").fadeOut(1000, function() {    
-                $("#sam").fadeIn(1200);
-            });
-        });
-        
-        $(".daminext").click(function(e) {
-            e.preventDefault();            
-            $("#dami").fadeOut(1000, function() {
-                $("#sam").fadeIn(1200);
-            });
-        });
-        $(".damiprev").click(function(e) {
-            e.preventDefault();            
-            $("#dami").fadeOut(1000, function() {
-                $("#moji").fadeIn(1200);
-            });
-        });
-
-        //initialize tooltip
-        $('[data--toggle=tooltip]').tooltip();
-
-        //copy to clipboard
-        // $(".clickToCopy").click(function(e) {
-        //     e.preventDefault();
-        //     $(this).siblings('a.email').select();
-        //     document.execCommand("copy");
-        //     alert("email copied!");
-        // });
-
-        //check if element is scrolledinto view
-        function isScrolledIntoView(e) {
-            var docViewTop = $(window).scrollTop();
-            var docViewBottom = docViewTop + $(window).height();
-
-            var elemTop = $(e).offset().top;
-            var elemBottom = elemTop + $(e).height();
-
-            return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-        }
-
-        //if element is scrolled into view, animate it
-        $(window).scroll(function() {
-            $('.animated').each(function() {
-                if (isScrolledIntoView(this) === true) {
-                    $(this).addClass('fadeIntoView');
-                }
-            });
-        });
-    });
-</script>
 </html>

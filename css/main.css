@@ -906,7 +906,7 @@ form label {
 }
 .close {
     display: inline-block;
-    width: 20px;
+    width: 30px;
     cursor: pointer;
     margin-top: -10px;
     margin-bottom: 20px;
