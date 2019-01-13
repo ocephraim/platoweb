@@ -873,6 +873,7 @@ form label {
     font-size: 1.75em;
 }
 #select {
+    width: 300px;
     -webkit-appearance: none;
     -moz-appearance: none;
     border: none;
@@ -1002,6 +1003,11 @@ form label {
         letter-spacing: 2px;
         font-size: 0.875em;
         color: #FFFFFF; 
+    }
+}
+@media all and (max-width: 330px) {
+    #select {
+        width: 250px;
     }
 }
 
