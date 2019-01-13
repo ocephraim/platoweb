@@ -475,7 +475,7 @@
     </section><!--getInTouch-->
 
     <footer>
-        <hr class="animated">
+        <hr>
         <div class="wrap foot container animated">
             <div class="copy">
                 <p>&copy; Copyright Platohub 2019</p>
@@ -637,24 +637,24 @@
         // });
 
         //check if element is scrolledinto view
-        // function isScrolledIntoView(e) {
-        //     var docViewTop = $(window).scrollTop();
-        //     var docViewBottom = docViewTop + $(window).height();
+        function isScrolledIntoView(e) {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
 
-        //     var elemTop = $(e).offset().top;
-        //     var elemBottom = elemTop + $(e).height();
+            var elemTop = $(e).offset().top;
+            var elemBottom = elemTop + $(e).height();
 
-        //     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-        // }
+            return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        }
 
         //if element is scrolled into view, animate it
-        // $(window).scroll(function() {
-        //     $('.animated').each(function() {
-        //         if (isScrolledIntoView(this) === true) {
-        //             $(this).addClass('fadeIntoView');
-        //         }
-        //     });
-        // });
+        $(window).scroll(function() {
+            $('.animated').each(function() {
+                if (isScrolledIntoView(this) === true) {
+                    $(this).addClass('fadeIntoView');
+                }
+            });
+        });
     });
 </script>
 </html>
