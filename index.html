@@ -85,8 +85,8 @@
     </section><!--hero-->
 
     <section id="subHero"class="subHero container">
-        <h3>Building a hassle-free future</h3>
-        <p>We as an R&D company, seek and take on huge problems, to create solutions that radically simplify lives, building Superior Human experience and help people put their lives on auto-pilot</p>
+        <h3 class="animated">Building a hassle-free future</h3>
+        <p class="animated">We as an R&D company, seek and take on huge problems, to create solutions that radically simplify lives, building Superior Human experience and help people put their lives on auto-pilot</p>
         <!-- <img src="" alt="stars"> -->
         <img src="images/spaceship.svg" alt="spaceship">
     </section><!--subHero-->
@@ -94,29 +94,29 @@
     <section class="whatWeDo container" id="about">
         <div class="offset">
             <div class="wrap">
-                <div class="description">
+                <div class="description animated">
                     <div class="vl left"></div><!--vertical_line-->
                     <p class="tag">What we do</p>
                 </div>
                 <div class="inset">
-                    <h5>We offer on-demand value with consistent focus on redefining how things are done</h5>
+                    <h5 class="animated">We offer on-demand value with consistent focus on redefining how things are done</h5>
                     <div class="container">
                         <div class="row whatContent">
                             <div class="whatText container col-md-12 col-lg-6 offset-1">
                                 <div class="row">
-                                    <div class="what col-md-6 col-12 innovation">
+                                    <div class="what col-md-6 col-12 innovation animated">
                                         <div class="color"></div>
                                         <p class="title">Innovation</p>
                                         <p class="content">Can't said fill. Sixth, creeping winged beast a years over. Make yielding. Bring. Together, you whose you'll bearing spirit created itself from have. Also darkness.</p>
                                     </div><!--innovation-->
                         
-                                    <div class="what col-md-6 col-12 service">
+                                    <div class="what col-md-6 col-12 service animated">
                                         <div class="color"></div>
                                         <p class="title">Service</p>
                                         <p class="content">Can't said fill. Sixth, creeping winged beast a years over. Make yielding. Bring. Together, you whose you'll bearing spirit created itself from have. Also darkness.</p>
                                     </div><!--service-->
                         
-                                    <div class="what col-md-6 col-12 empowerment">
+                                    <div class="what col-md-6 col-12 empowerment animated">
                                         <div class="color"></div>
                                         <p class="title">Empowerment</p>
                                         <p class="content">Can't said fill. Sixth, creeping winged beast a years over. Make yielding. Bring. Together, you whose you'll bearing spirit created itself from have. Also darkness.</p>
@@ -137,13 +137,13 @@
     <section class="thePlatohubWay container">
         <div class="offset">
             <div class="wrap">
-                <div class="description">
+                <div class="description animated">
                     <div class="vl left"></div><!--vertical_line-->
                     <p class="tag tag2">The Platohub Way</p>
                 </div>
 
-                <div class="inset">
-                <img class="img-fluid process" src="images/process.svg" alt="">
+                <div class="inset animated">
+                    <img class="img-fluid process" src="images/process.svg" alt="">
                 </div><!--inset-->
                 <!-- <div class="vl right"></div>vertical_line -->
             </div><!--wrap-->
@@ -153,14 +153,14 @@
     <section class="whereWeAre container" id="platforms">
         <div class="offset2">
             <div class="wrap">
-                <div class="description">
+                <div class="description animated">
                     <div class="vl left"></div><!--vertical_line-->
                     <p class="tag tag3">Where we are</p>
                 </div>
 
                 <div class="inset">
-                    <h5>At Platohub, we drive innovation by indentifying service gaps in industries and creating solutions</h5>
-                    <div class="platforms slide-wrapper">
+                    <h5 class="animated">At Platohub, we drive innovation by indentifying service gaps in industries and creating solutions</h5>
+                    <div class="platforms slide-wrapper animated">
                         <div class="container">
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
@@ -200,12 +200,12 @@
     <section class="theFoundingPartners container" id="team">
         <div class="offset offset3">
             <div class="wrap wrap3">
-                <div class="description description2">
+                <div class="description description2 animated">
                     <div class="vl left"></div><!--vertical_line-->
                     <p class="tag tag4">Our founding partners</p>
                 </div>
 
-                <div class="inset inset3">
+                <div class="inset inset3 animated">
                     <div class="partnerBig">
                         <div class="partner">
                             <div id="sam">
@@ -348,15 +348,15 @@
     <section class="getInTouch container" id="contact">
         <div class="offset2">
             <div class="wrap">
-                <div class="description">
+                <div class="description animated">
                     <div class="vl left"></div><!--vertical_line-->
                     <p class="tag tag3">Get in touch</p>
                 </div>
                 <div class="inset">
-                    <h5>We are constantly looking out for the best minds, and ambitious people who are driven to build the future. Get in touch with us</h5>
+                    <h5 class="animated">We are constantly looking out for the best minds, and ambitious people who are driven to build the future. Get in touch with us</h5>
 
                     <form action="" method="POST">
-                        <div class="fillForm">
+                        <div class="fillForm animated">
                             <label for="#select">I</label>
                             <select name="whatIsThisAbout" id="select">
                                 <option value="empty"></option>
@@ -383,6 +383,11 @@
                                 <input class="form-control" type="url" name="portfolio" id="portfolio" placeholder="https://">
                             </div>
 
+                            <div class="form-group">
+                                <label for="email">How do we contact you</label>
+                                <input class="form-control" type="email" name="emal" id="email" placeholder="yourmail@email.com">
+                            </div>
+
                             <!-- <img src="images/jumbo-img.png" alt=""> -->
 
                             <button type="submit" class="btn">Shoot</button>
@@ -391,6 +396,11 @@
                             <div class="form-group">
                                 <label for="greatIdeas">Let us change the world together. Tell us just enough to get our attention</label>
                                 <textarea class="form-control" name="cover letter" id="greatIdeas" cols="30" rows="10" placeholder="Skip the jargon..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">How do we contact you</label>
+                                <input class="form-control" type="email" name="emal" id="email" placeholder="yourmail@email.com">
                             </div>
 
                             <!-- <img src="images/jumbo-img.png" alt=""> -->
@@ -402,6 +412,11 @@
                                 <label for="greatIdeas">We are glad you care. Let us hear from you</label>
                                 <textarea class="form-control" name="cover letter" id="greatIdeas" cols="30" rows="10" placeholder="Skip the jargon..."></textarea>
                             </div>
+                            
+                            <div class="form-group">
+                                <label for="email">How do we contact you</label>
+                                <input class="form-control" type="email" name="emal" id="email" placeholder="yourmail@email.com">
+                            </div>
 
                             <!-- <img src="images/jumbo-img.png" alt=""> -->
 
@@ -411,6 +426,11 @@
                             <div class="form-group">
                                 <label for="greatIdeas">We are glad you trust us. What is your question?</label>
                                 <textarea class="form-control" name="cover letter" id="greatIdeas" cols="30" rows="10" placeholder="Skip the jargon..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">How do we contact you</label>
+                                <input class="form-control" type="email" name="emal" id="email" placeholder="yourmail@email.com">
                             </div>
 
                             <!-- <img src="images/jumbo-img.png" alt=""> -->
@@ -443,7 +463,7 @@
                         </div>
                         <button type="submit" class="btn">Shoot Message</button>
                     </form>contactForm -->
-                    <div class="contacts">
+                    <div class="contacts animated">
                         <p class="address">70 Olonode street, Alagomeji Yaba, Lagos</p>
                         <div class="clickToCopy" data-toggle="tooltip" title="Click to copy" data-placement="auto">
                             <a href="mailto:info@platohub.com" class="email">info@platohub.com</a>
@@ -455,13 +475,13 @@
     </section><!--getInTouch-->
 
     <footer>
-        <hr>
+        <hr class="animated">
         <div class="wrap foot container">
-            <div class="copy">
+            <div class="copy animated">
                 <p>&copy; Copyright Platohub 2019</p>
             </div><!--copy-->
     
-            <div class="links">
+            <div class="links animated">
                 <a href="" class="socials twitter" target="_blank">
                     <img src="images/twitter.svg" alt="">
                 </a>
@@ -604,26 +624,6 @@
                 $("#moji").fadeIn(1200);
             });
         });
-        // $(".sam").click(function(e) {
-        //     e.preventDefault();
-        //     $("#sam").show(1000);
-        //     $("#moji").hide(1000);
-        //     $("#dami").hide(1000);
-        // });
-        // $(".moji").click(function(e) {
-        //     e.preventDefault();
-        //     $("#moji").show(1000);
-        //     $("#sam").hide(1000);
-        //     $("#dami").hide(1000);
-        // });
-        // $(".dami").click(function(e) {
-        //     e.preventDefault();
-        //     $("#dami").show(1000);
-        //     $("#moji").hide(1000);
-        //     $("#sam").hide(1000);
-        // });
-
-
 
         //initialize tooltip
         $('[data--toggle=tooltip]').tooltip();
@@ -635,6 +635,26 @@
         //     document.execCommand("copy");
         //     alert("email copied!");
         // });
+
+        //check if element is scrolledinto view
+        function isScrolledIntoView(e) {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+
+            var elemTop = $(e).offset().top;
+            var elemBottom = elemTop + $(e).height();
+
+            return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        }
+
+        //if element is scrolled into view, animate it
+        $(window).scroll(function() {
+            $('.animated').each(function() {
+                if (isScrolledIntoView(this) === true) {
+                    $(this).addClass('fadeIntoView');
+                }
+            });
+        });
     });
 </script>
 </html>
