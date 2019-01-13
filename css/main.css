@@ -1095,9 +1095,9 @@ footer {
     color: #000000;
     box-shadow: none;
 }
-.animated {
+/* .animated {
     opacity: 0;
-}
+} */
 .fadeIntoView {
     animation: HeroAnimation;
     animation-duration: 3s;

@@ -325,17 +325,17 @@
                         <ol class="carousel-indicators list-inline">
                             <li class="list-inline-item active">
                                 <a data-target="#otherCarousel" data-slide-to="0">
-                                    <img class="thumb img-fluid" src="images/image2.svg" alt="SamEkpe">
+                                    <img class="thumb img-fluid" src="images/woman.png" alt="SamEkpe">
                                 </a>
                             </li>
                             <li class="list-inline-item">
                                 <a data-target="#otherCarousel" data-slide-to="1">
-                                    <img class="thumb img-fluid" src="images/image2.svg" alt="SamEkpe">
+                                    <img class="thumb img-fluid" src="images/woman.png" alt="SamEkpe">
                                 </a>
                             </li>
                             <li class="list-inline-item">
                                 <a data-target="#otherCarousel" data-slide-to="2">
-                                    <img class="thumb img-fluid" src="images/image2.svg" alt="SamEkpe">
+                                    <img class="thumb img-fluid" src="images/woman.png" alt="SamEkpe">
                                 </a>
                             </li>
                         </ol>
@@ -476,12 +476,12 @@
 
     <footer>
         <hr class="animated">
-        <div class="wrap foot container">
-            <div class="copy animated">
+        <div class="wrap foot container animated">
+            <div class="copy">
                 <p>&copy; Copyright Platohub 2019</p>
             </div><!--copy-->
     
-            <div class="links animated">
+            <div class="links">
                 <a href="" class="socials twitter" target="_blank">
                     <img src="images/twitter.svg" alt="">
                 </a>
@@ -637,24 +637,24 @@
         // });
 
         //check if element is scrolledinto view
-        function isScrolledIntoView(e) {
-            var docViewTop = $(window).scrollTop();
-            var docViewBottom = docViewTop + $(window).height();
+        // function isScrolledIntoView(e) {
+        //     var docViewTop = $(window).scrollTop();
+        //     var docViewBottom = docViewTop + $(window).height();
 
-            var elemTop = $(e).offset().top;
-            var elemBottom = elemTop + $(e).height();
+        //     var elemTop = $(e).offset().top;
+        //     var elemBottom = elemTop + $(e).height();
 
-            return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-        }
+        //     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        // }
 
         //if element is scrolled into view, animate it
-        $(window).scroll(function() {
-            $('.animated').each(function() {
-                if (isScrolledIntoView(this) === true) {
-                    $(this).addClass('fadeIntoView');
-                }
-            });
-        });
+        // $(window).scroll(function() {
+        //     $('.animated').each(function() {
+        //         if (isScrolledIntoView(this) === true) {
+        //             $(this).addClass('fadeIntoView');
+        //         }
+        //     });
+        // });
     });
 </script>
 </html>
