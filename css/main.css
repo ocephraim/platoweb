@@ -898,16 +898,18 @@ form label {
 }
 .jumbotron {
     overflow: hidden;
+    padding-top: 2.4em; 
     clear: both;
     /* background: #FFFFFF; */
     box-shadow: inset 0px 1px 5px 0 rgba(0, 0, 0, 0.1);
     position: relative;
 }
-.jumbotron img {
-    /* width: 300px; */
-    position: absolute;
-    left: -40px;
-    bottom: -40px;
+.close {
+    display: inline-block;
+    width: 20px;
+    cursor: pointer;
+    margin-top: -10px;
+    margin-bottom: 20px;
 }
 .jumbotron > div {
     margin-top: 32px;
@@ -1095,12 +1097,12 @@ footer {
     color: #000000;
     box-shadow: none;
 }
-/* .animated {
+.animated {
     opacity: 0;
-} */
+}
 .fadeIntoView {
     animation: HeroAnimation;
-    animation-duration: 3s;
+    animation-duration: 1s;
     /* animation-delay: 0.1s; */
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);

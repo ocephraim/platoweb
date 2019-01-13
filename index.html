@@ -325,17 +325,17 @@
                         <ol class="carousel-indicators list-inline">
                             <li class="list-inline-item active">
                                 <a data-target="#otherCarousel" data-slide-to="0">
-                                    <img class="thumb img-fluid" src="images/woman.png" alt="SamEkpe">
+                                    <img class="thumb img-fluid" src="images/image2.svg" alt="SamEkpe">
                                 </a>
                             </li>
                             <li class="list-inline-item">
                                 <a data-target="#otherCarousel" data-slide-to="1">
-                                    <img class="thumb img-fluid" src="images/woman.png" alt="SamEkpe">
+                                    <img class="thumb img-fluid" src="images/image2.svg" alt="SamEkpe">
                                 </a>
                             </li>
                             <li class="list-inline-item">
                                 <a data-target="#otherCarousel" data-slide-to="2">
-                                    <img class="thumb img-fluid" src="images/woman.png" alt="SamEkpe">
+                                    <img class="thumb img-fluid" src="images/image2.svg" alt="SamEkpe">
                                 </a>
                             </li>
                         </ol>
@@ -368,6 +368,9 @@
                         </div><!--fillForm-->
 
                         <div id="work" class="jumbotron">
+
+                            <img src="images/close.svg" alt="close" class="close">
+
                             <div class="form-group">
                                 <label for="coverLetter">We take our hiring process very seriously. Tell us why you want to join us</label>
                                 <textarea class="form-control" name="cover letter" id="coverLetter" cols="30" rows="8" placeholder="start typing..."></textarea>
@@ -393,6 +396,9 @@
                             <button type="submit" class="btn">Shoot</button>
                         </div><!--work-->
                         <div id="idea" class="jumbotron">
+                            
+                            <img src="images/close.svg" alt="close" class="close">
+
                             <div class="form-group">
                                 <label for="greatIdeas">Let us change the world together. Tell us just enough to get our attention</label>
                                 <textarea class="form-control" name="cover letter" id="greatIdeas" cols="30" rows="10" placeholder="Skip the jargon..."></textarea>
@@ -408,6 +414,9 @@
                             <button type="submit" class="btn">Shoot</button>
                         </div><!--idea-->
                         <div id="improve" class="jumbotron">
+
+                            <img src="images/close.svg" alt="close" class="close">
+
                             <div class="form-group">
                                 <label for="greatIdeas">We are glad you care. Let us hear from you</label>
                                 <textarea class="form-control" name="cover letter" id="greatIdeas" cols="30" rows="10" placeholder="Skip the jargon..."></textarea>
@@ -423,6 +432,9 @@
                             <button type="submit" class="btn">Shoot</button>
                         </div><!--improve-->
                         <div id="question" class="jumbotron">
+                            
+                            <img src="images/close.svg" alt="close" class="close">
+
                             <div class="form-group">
                                 <label for="greatIdeas">We are glad you trust us. What is your question?</label>
                                 <textarea class="form-control" name="cover letter" id="greatIdeas" cols="30" rows="10" placeholder="Skip the jargon..."></textarea>
@@ -512,6 +524,9 @@
         $('#select').change(function() {
             GetInTouch();
             $('#' + $(this).val()).fadeIn(1000);
+        });
+        $('.close').click(function() {
+            $('.jumbotron').fadeOut(1000);
         });
 
 
