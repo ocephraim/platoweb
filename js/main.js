@@ -142,9 +142,9 @@ $(document).ready(function() {
         var docViewBottom = docViewTop + $(window).height();
 
         var elemTop = $(e).offset().top;
-        var elemBottom = elemTop + $(e).height();
+        var elemBottom = elemTop + $(e).outerHeight();
 
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        return ((elemTop < docViewBottom) && (elemBottom > docViewTop));
     }
 
     //if element is scrolled into view, animate it
