@@ -463,12 +463,11 @@
     margin: 0 auto;
     /* align-items: center; */
 }
-.what {
-    margin: 0 auto;
-}
 .whatPics img {
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 70%;
+    overflow: visible;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
     /* box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25); */
@@ -526,11 +525,11 @@
         justify-self: center
     } */
     .what .title {
-        font-size: 0.75em;
+        font-size: 0.875em;
     }
     .what .content {
         /* text-align: center; */
-        font-size: 0.75em;
+        font-size: 0.875em;
     }
 }
 
@@ -571,7 +570,7 @@
         padding-top: 24px;
     }
     .processText p {
-        font-size: 0.75em;
+        font-size: 0.875em;
         margin-top: 12px;
     }
     /* .thePlatohubWay {
@@ -833,7 +832,7 @@
     text-transform: uppercase;
 }
 .partnerSmall .carousel-indicators {
-    margin: 10px 0 10px;
+    margin: 32px 0 10px;
     overflow: auto;
     position: static;
     text-align: left;
